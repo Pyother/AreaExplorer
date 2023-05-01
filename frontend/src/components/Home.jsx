@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Container, Grid } from '@mui/material';
-import './style.css';
 
 const Home = () => {
     return (
         <div>
             <Container>
                 <Grid>
-                    <h1>2d mapper</h1>
+                    <h1>Map visualization</h1>
                 </Grid>
             </Container>            
         </div>
