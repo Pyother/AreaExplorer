@@ -18,6 +18,6 @@ describe('Home', () => {
 
 describe('style.css file', () => {
   it('should exist', () => {
-    expect(fs.existsSync('src/components/style.css')).toBe(true);
+    expect(fs.existsSync('public/style.css')).toBe(true);
   });
 });
