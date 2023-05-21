@@ -1,27 +1,34 @@
 pipeline {
   agent any
   stages {
+    stage('Checkout') {
+      steps {
+        sh '''echo "Checkout"
+git \'https://github.com/Pyother/AreaExplorer\''''
+      }
+    }
+
     stage('Build') {
       steps {
-        sh 'echo "build"'
+        sh 'echo "Build"'
       }
     }
 
     stage('Test') {
       steps {
-        echo 'test'
+        sh 'echo "Test"'
       }
     }
 
     stage('Deploy') {
       steps {
-        echo 'deploy'
+        sh 'echo "Deploy"'
       }
     }
 
     stage('Publish') {
       steps {
-        echo 'publish'
+        sh 'echo "Publish"'
       }
     }
 
