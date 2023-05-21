@@ -4,7 +4,7 @@ pipeline {
     stage('Checkout') {
       steps {
         sh '''echo "Checkout"
-git \'https://github.com/Pyother/AreaExplorer\''''
+git clone \'https://github.com/Pyother/AreaExplorer\''''
       }
     }
 
