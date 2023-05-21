@@ -10,7 +10,9 @@ git clone \'https://github.com/Pyother/AreaExplorer\''''
 
     stage('Build') {
       steps {
-        sh 'echo "Build"'
+        sh '''echo "Build"
+npm install react
+npm install react-scripts'''
       }
     }
 
