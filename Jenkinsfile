@@ -11,6 +11,8 @@ pipeline {
       steps {
         sh '''echo "Build"
 cd frontend
+npm install -f react
+npm install -f react-scripts
 npm run build'''
       }
     }
