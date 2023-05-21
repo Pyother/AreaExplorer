@@ -3,16 +3,15 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        sh '''echo "Checkout"
-git clone \'https://github.com/Pyother/AreaExplorer\''''
+        sh 'echo "Checkout"'
       }
     }
 
     stage('Build') {
       steps {
         sh '''echo "Build"
-npm install react
-npm install react-scripts'''
+cd frontend
+npm run build'''
       }
     }
 
