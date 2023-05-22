@@ -11,9 +11,13 @@ pipeline {
       steps {
         echo 'Build Process'
         sh '''rm -rf *
-git clone https://github.com/Pyother/AreaExplorer
+'''
+        sh '''git clone https://github.com/Pyother/AreaExplorer
 '''
         sh 'cd AreaExplorer/frontend'
+        sh '''apt-get install -y nodejs
+'''
+        sh 'apt-get install -y npm'
       }
     }
 
