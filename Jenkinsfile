@@ -15,6 +15,7 @@ pipeline {
         sh 'git clone https://github.com/Pyother/AreaExplorer.git'
         sh '''cd AreaExplorer/dockerfiles
 '''
+        sh 'docker --version'
       }
     }
 
