@@ -13,7 +13,7 @@ pipeline {
         sh '''rm -rf *
 git clone https://github.com/Pyother/AreaExplorer
 '''
-        sh 'cd AreaExplorer_master/frontend'
+        sh 'cd AreaExplorer_master/AreaExplorer/frontend'
       }
     }
 
