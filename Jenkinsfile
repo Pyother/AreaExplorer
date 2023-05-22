@@ -12,7 +12,7 @@ pipeline {
         echo 'Build Process'
         sh '''rm -rf *
 '''
-        sh '''git clone https://github.com/InzynieriaOprogramowaniaAGH/MDO2023_INO.git
+        sh '''git clone git@github.com:InzynieriaOprogramowaniaAGH/MDO2023_INO.git
 '''
         sh 'ls'
       }
