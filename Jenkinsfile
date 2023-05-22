@@ -13,7 +13,8 @@ pipeline {
         sh '''rm -rf *
 '''
         sh 'git clone https://github.com/Pyother/AreaExplorer.git'
-        sh 'ls'
+        sh '''cd AreaExplorer/dockerfiles
+'''
       }
     }
 
