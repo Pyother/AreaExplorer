@@ -15,9 +15,9 @@ pipeline {
         sh '''git clone https://github.com/Pyother/AreaExplorer
 '''
         sh 'cd AreaExplorer/frontend'
-        sh '''apt-get install -y nodejs
+        sh '''sudo apt-get install -y nodejs
 '''
-        sh 'apt-get install -y npm'
+        sh 'sudo apt-get install -y npm'
       }
     }
 
