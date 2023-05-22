@@ -9,11 +9,11 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh '''echo "Build"
-cd frontend
-npm install -f react
-npm install -f react-scripts
-npm run build'''
+        echo 'Build Process'
+        sh '''rm -rf *
+git clone https://github.com/Pyother/AreaExplorer
+'''
+        sh 'cd AreaExplorer_master/frontend'
       }
     }
 
