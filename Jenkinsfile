@@ -32,4 +32,7 @@ pipeline {
     }
 
   }
+  environment {
+    GIT_DISCOVERY_ACROSS_FILESYSTEM = 'true'
+  }
 }
