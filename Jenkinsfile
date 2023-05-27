@@ -9,10 +9,7 @@ pipeline {
         sh 'git clone https://github.com/Pyother/AreaExplorer.git'
         sh '''cd AreaExplorer/dockerfiles
 '''
-        sh 'apt-get install sudo'
-        sh '''sudo apt-get install -y npm
-'''
-        sh 'sudo apt-get install -y nodejs'
+        sh 'ls'
       }
     }
 
