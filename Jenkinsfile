@@ -9,7 +9,7 @@ pipeline {
         sh 'git clone https://github.com/Pyother/AreaExplorer.git'
         sh '''cd AreaExplorer/dockerfiles
 '''
-        sh 'ls'
+        sh 'node --version'
       }
     }
 
