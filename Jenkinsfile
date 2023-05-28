@@ -1,5 +1,12 @@
 pipeline {
   agent any
+  tools{
+    nodejs '18.2.0'
+  }
+  environment {
+    GIT_DISCOVERY_ACROSS_FILESYSTEM = 'true'
+  }
+
   stages {
     stage('Build') {
       steps {
@@ -33,8 +40,5 @@ pipeline {
       }
     }
 
-  }
-  environment {
-    GIT_DISCOVERY_ACROSS_FILESYSTEM = 'true'
   }
 }
