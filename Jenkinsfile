@@ -9,7 +9,7 @@ pipeline {
         sh 'git clone https://github.com/Pyother/AreaExplorer.git'
         dir(path: 'AreaExplorer/dockerfiles') {
           sh 'ls'
-          sh 'npm run build'
+          sh 'docker --version'
         }
 
       }
