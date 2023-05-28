@@ -7,9 +7,11 @@ pipeline {
         sh '''rm -rf *
 '''
         sh 'git clone https://github.com/Pyother/AreaExplorer.git'
-        sh '''cd AreaExplorer/dockerfiles
-'''
-        sh 'node --version'
+        dir(path: 'AreaExplorer/dockerfiles') {
+          sh 'ls'
+          sh 'npm run build'
+        }
+
       }
     }
 
