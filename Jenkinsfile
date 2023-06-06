@@ -12,7 +12,7 @@ pipeline {
         sh 'echo "BUILD"'
         sh 'ls'
         dir(path: 'frontend') {
-          sh 'ls'
+          sh 'npm --version'
         }
 
       }
