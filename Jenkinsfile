@@ -13,7 +13,7 @@ pipeline {
         sh 'ls'
         dir(path: 'frontend') {
           sh 'docker --version'
-          sh 'apt-get install -y nodejs'
+          sh 'sudo su'
         }
 
       }
