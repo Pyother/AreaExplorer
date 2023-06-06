@@ -11,7 +11,7 @@ pipeline {
       steps {
         sh 'echo "BUILD"'
         sh 'ls'
-        dir(path: '/frontend') {
+        dir(path: 'frontend') {
           sh 'ls'
         }
 
