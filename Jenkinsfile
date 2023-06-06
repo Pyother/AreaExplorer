@@ -11,6 +11,10 @@ pipeline {
       steps {
         sh 'echo "BUILD"'
         sh 'ls'
+        dir(path: '/frontend') {
+          sh 'nmp --version'
+        }
+
       }
     }
 
