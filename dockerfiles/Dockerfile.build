@@ -10,6 +10,7 @@ WORKDIR /frontend
 
 RUN npm install react 
 RUN npm install react-scripts
+RUN ls
 
-RUN npm run build
+#RUN npm run build
 
