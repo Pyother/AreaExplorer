@@ -12,6 +12,8 @@ pipeline {
         sh 'echo "BUILD"'
         sh 'ls'
         dir(path: 'frontend') {
+          sh 'npm install -f react'
+          sh 'npm install -f react-scripts'
           sh 'npm run build'
         }
 
