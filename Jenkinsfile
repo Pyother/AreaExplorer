@@ -32,6 +32,11 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'echo "DEPLOY"'
+        dir(path: 'dockerfiles') {
+          sh 'docker build -t buildimage -f Dockerfile.build . '
+          sh 'docker run buildimage'
+        }
+
       }
     }
 
