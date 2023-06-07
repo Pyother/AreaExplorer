@@ -11,9 +11,9 @@ pipeline {
       steps {
         sh 'echo "BUILD"'
         sh 'ls'
-        dir(path: 'frontend') {
+        dir(path: 'dockerfiles') {
           sh 'docker --version'
-          sh 'sudo su'
+          sh 'docker build -t buildimage -f Dockerfile.build .'
         }
 
       }
