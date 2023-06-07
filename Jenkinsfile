@@ -11,9 +11,10 @@ pipeline {
       steps {
         sh 'echo "BUILD"'
         sh 'ls'
-        dir(path: 'dockerfiles') {
-          sh 'docker --version'
-          sh 'docker build -t buildimage -f Dockerfile.build .'
+        dir(path: 'frontend') {
+          sh 'npm install -f react'
+          sh 'npm install -f react-scripts'
+          sh 'npm run build'
         }
 
       }
