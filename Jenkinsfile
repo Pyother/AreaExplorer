@@ -22,7 +22,10 @@ pipeline {
 
     stage('Test') {
       steps {
-        sh 'echo "TEST"'
+        dir(path: 'frontend') {
+          sh 'npm run test'
+        }
+
       }
     }
 
