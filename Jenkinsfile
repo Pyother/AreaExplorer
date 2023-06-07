@@ -11,11 +11,8 @@ pipeline {
       steps {
         sh 'echo "BUILD"'
         sh 'ls'
-        dir(path: 'dockerfiles') {
-          sh 'docker --version'
-          sh 'docker build -t buildimage -f Dockerfile.build .'
-          sh 'node --version'
-          sh 'npm --version'
+        dir(path: 'frontend') {
+          sh 'npm run build'
         }
 
       }
