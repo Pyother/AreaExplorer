@@ -14,6 +14,8 @@ pipeline {
         dir(path: 'dockerfiles') {
           sh 'docker --version'
           sh 'docker build -t buildimage -f Dockerfile.build .'
+          sh 'node --version'
+          sh 'npm --version'
         }
 
       }
