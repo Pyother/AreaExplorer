@@ -22,13 +22,21 @@ pipeline {
 
     stage('Test') {
       steps {
-        sh 'echo "TEST"'
+        dir(path: 'frontend') {
+          sh 'npm run test'
+        }
+
       }
     }
 
     stage('Deploy') {
       steps {
         sh 'echo "DEPLOY"'
+        dir(path: 'dockerfiles') {
+          sh 'docker build -t buildimage -f Dockerfile.build . '
+          sh 'docker run buildimage'
+        }
+
       }
     }
 
