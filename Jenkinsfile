@@ -28,6 +28,7 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'echo "DEPLOY"'
+        sh 'npm pack'
       }
     }
 
