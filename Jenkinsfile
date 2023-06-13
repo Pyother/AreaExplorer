@@ -11,32 +11,22 @@ pipeline {
       steps {
         sh 'echo "BUILD"'
         sh 'ls'
-        dir(path: 'frontend') {
-          sh 'npm install -f react'
-          sh 'npm install -f react-scripts'
-          sh 'npm run build'
-        }
-
+        sh 'npm install -f react'
+        sh 'npm install -f react-scripts'
+        sh 'npm run build'
       }
     }
 
     stage('Test') {
       steps {
-        dir(path: 'frontend') {
-          sh 'npm run test'
-        }
-
+        sh 'npm run test'
+        sh 'echo "TEST"'
       }
     }
 
     stage('Deploy') {
       steps {
         sh 'echo "DEPLOY"'
-        dir(path: 'dockerfiles') {
-          sh 'docker build -t buildimage -f Dockerfile.build . '
-          sh 'docker run buildimage'
-        }
-
       }
     }
 
