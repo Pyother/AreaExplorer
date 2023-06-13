@@ -1,0 +1,5 @@
+Jenkinsfile
+node_modules/
+build/
+src/__tests__
+src/components/__tests__
