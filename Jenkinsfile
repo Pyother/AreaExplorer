@@ -29,6 +29,7 @@ pipeline {
       steps {
         sh 'echo "DEPLOY"'
         sh 'npm pack'
+        sh 'ls'
       }
     }
 
