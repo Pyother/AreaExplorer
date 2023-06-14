@@ -3,14 +3,14 @@ pipeline {
   stages {
     stage('Configure') {
       steps {
-        sh 'echo "==== CONFIGURATION ===="'
+        sh 'echo "CONFIGURATION"'
         sh 'ls'
       }
     }
 
     stage('Build') {
       steps {
-        sh 'echo "======== BUILD ========"'
+        sh 'echo "BUILD"'
         sh 'npm install -f react-scripts'
         sh 'npm run build'
       }
@@ -18,14 +18,14 @@ pipeline {
 
     stage('Test') {
       steps {
-        sh 'echo "======== TEST ========="'
+        sh 'echo "TEST"'
         sh 'npm run test'
       }
     }
 
     stage('Deploy') {
       steps {
-        sh 'echo "======== DEPLOY ======="'
+        sh 'echo "DEPLOY"'
         sh 'npm pack'
         sh 'ls'
       }
@@ -33,7 +33,7 @@ pipeline {
 
     stage('Publish') {
       steps {
-        sh 'echo "======= PUBLISH ======="'
+        sh 'echo "PUBLISH"'
       }
     }
 
