@@ -4,6 +4,8 @@ pipeline {
     stage('Configure') {
       steps {
         sh 'echo "CONFIGURATION"'
+        sh '''rm *.tar
+'''
         sh 'ls'
       }
     }
@@ -26,6 +28,7 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'echo "DEPLOY"'
+        sh './package_update.sh'
         sh 'npm pack'
         sh 'ls'
       }
