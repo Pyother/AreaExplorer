@@ -34,6 +34,9 @@ pipeline {
     stage('Publish') {
       steps {
         sh 'echo "PUBLISH"'
+        sh '''./package_update.sh
+'''
+        sh 'npm publish'
       }
     }
 
