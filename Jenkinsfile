@@ -4,6 +4,7 @@ pipeline {
     stage('Configure') {
       steps {
         sh 'echo "CONFIGURATION"'
+        sh 'rm *.tgz'
         sh 'ls'
       }
     }
