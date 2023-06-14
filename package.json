@@ -1,7 +1,7 @@
 {
-  "name": "2dmapper",
-  "version": "0.1.0",
-  "private": true,
+  "name": "areaexplorer",
+  "version": "0.1.1",
+  "private": false,
   "dependencies": {
     "@mui/material": "^5.12.1",
     "@testing-library/jest-dom": "^5.16.5",
@@ -41,5 +41,17 @@
   },
   "devDependencies": {
     "prettier": "2.8.8"
-  }
+  },
+  "description": " Autonomous Hazard Detection and Room Exploration Vehicle website. ",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pyother/AreaExplorer.git"
+  },
+  "author": "Piotr Sobol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pyother/AreaExplorer/issues"
+  },
+  "homepage": "https://github.com/Pyother/AreaExplorer#readme"
 }
