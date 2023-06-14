@@ -4,6 +4,7 @@ pipeline {
     stage('Configure') {
       steps {
         sh 'echo "CONFIGURATION"'
+        sh 'rm *.tgz'
         sh 'ls'
       }
     }
@@ -35,6 +36,7 @@ pipeline {
     stage('Publish') {
       steps {
         sh 'echo "PUBLISH"'
+        sh 'npm publish'
       }
     }
 
