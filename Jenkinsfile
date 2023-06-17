@@ -37,6 +37,7 @@ pipeline {
     stage('Publish') {
       steps {
         sh 'echo "PUBLISH"'
+        archiveArtifacts 'AreaExplorer_master-1.0.0.tgz'
       }
     }
 
