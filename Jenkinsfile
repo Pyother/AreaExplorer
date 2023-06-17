@@ -28,7 +28,6 @@ pipeline {
       steps {
         sh 'echo "DEPLOY"'
         sh './package_update.sh'
-        sh 'npm -y init'
         sh 'npm pack'
         sh 'ls'
       }
@@ -37,13 +36,9 @@ pipeline {
     stage('Publish') {
       steps {
         sh 'echo "PUBLISH"'
-        script {
-          def packageFile = sh(
-            script: 'ls | grep "*.tgz"',
-            returnStdout: true
-          ).trim()
-          archiveArtifacts artifacts: packageFile, fingerprint: true
-        }
+        sh 'npm publish'
       }
     }
+
   }
+}
