@@ -28,6 +28,7 @@ pipeline {
       steps {
         sh 'echo "DEPLOY"'
         sh './package_update.sh'
+        sh 'npm -y init'
         sh 'npm pack'
         sh 'ls'
       }
