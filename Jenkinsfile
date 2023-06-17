@@ -37,13 +37,13 @@ pipeline {
     stage('Publish') {
       steps {
         sh 'echo "PUBLISH"'
-        sh '''def packageFile = sh(
-        script: \'ls | grep "*.tgz"\',
-        returnStdout: true
-      ).trim()
-      archiveArtifacts artifacts: packageFile, fingerprint: true'''
+        script {
+          def packageFile = sh(
+            script: 'ls | grep "*.tgz"',
+            returnStdout: true
+          ).trim()
+          archiveArtifacts artifacts: packageFile, fingerprint: true
         }
       }
-
     }
   }
