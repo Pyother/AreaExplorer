@@ -38,6 +38,7 @@ pipeline {
       steps {
         sh 'echo "PUBLISH"'
         archiveArtifacts 'AreaExplorer_master-1.0.0.tgz'
+        sh 'npm publish AreaExplorer_master-1.0.0.tgz'
       }
     }
 
