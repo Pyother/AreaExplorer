@@ -6,6 +6,7 @@ pipeline {
         sh 'echo "CONFIGURATION"'
         sh 'rm *.tgz'
         sh 'ls'
+        sh 'echo ${env.BUILD_NUMBER}'
       }
     }
 
@@ -38,9 +39,11 @@ pipeline {
       steps {
         sh 'echo "PUBLISH"'
         archiveArtifacts 'AreaExplorer_master-1.0.0.tgz'
-        sh 'npm publish AreaExplorer_master-1.0.0.tgz'
       }
     }
 
+  }
+  environment {
+    BUILD_NUMBER = '${env.BUILD_NUMBER}'
   }
 }
