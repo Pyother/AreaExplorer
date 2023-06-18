@@ -6,7 +6,8 @@ pipeline {
         sh 'echo "CONFIGURATION"'
         sh 'rm *.tgz'
         sh 'ls'
-        sh '''printf \'BUILD_NUMBER: %s\' \\"${BUILD_NUMBER}\\"
+        sh '''echo \'BUILD_NUMBER: {BUILD_NUMBER}\'
+
 '''
       }
     }
