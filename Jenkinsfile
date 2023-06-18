@@ -44,6 +44,6 @@ pipeline {
 
   }
   environment {
-    BUILD_NUMBER = '${env.BUILD_NUMBER}'
+    BUILD_NUMBER = '${BUILD_NUMBER}'
   }
 }
