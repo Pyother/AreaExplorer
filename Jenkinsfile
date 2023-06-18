@@ -6,7 +6,7 @@ pipeline {
         sh 'echo "CONFIGURATION"'
         sh 'rm *.tgz'
         sh 'ls'
-        sh 'echo ${env.BUILD_NUMBER}'
+        sh 'echo "BUILD_NUMBER: ${env.BUILD_NUMBER}"'
       }
     }
 
