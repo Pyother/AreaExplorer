@@ -6,6 +6,9 @@ pipeline {
         sh 'echo "CONFIGURATION"'
         sh 'rm *.tgz'
         sh 'ls'
+        sh '''echo \'BUILD_NUMBER: {BUILD_NUMBER}\'
+
+'''
       }
     }
 
@@ -41,5 +44,8 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    BUILD_NUMBER = '${BUILD_NUMBER}'
   }
 }
