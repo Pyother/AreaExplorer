@@ -4,8 +4,6 @@ COPY . /app
 WORKDIR /app
 RUN ls
 
-RUN npm update
-
 EXPOSE 3000
 
 CMD ["npm", "start"]
